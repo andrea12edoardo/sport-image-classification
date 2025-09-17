@@ -9,7 +9,7 @@ This project investigates the performance of image classification neural network
 
 ## Dataset
 
-The [100 Sports Classification dataset](https://www.kaggle.com/datasets/gpiosenka/sports-classification) (available on Kaggle) contains more than 100,000 color images (224×224 pixels) representing 100 different sports categories. For this project, 10 categories were selected, each with 15 to 20 images. 
+The [100 Sports Classification dataset](https://www.kaggle.com/datasets/gpiosenka/sports-classification) (available on Kaggle) contains more than 100,000 color images (224×224 pixels) representing 100 different sports categories. For this project, 11 categories were selected, each with 15 to 20 images. 
 The dataset is then organized into balanced training, validation, and test sets.
 
 ## Project Structure
