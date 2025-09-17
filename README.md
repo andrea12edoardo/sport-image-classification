@@ -25,7 +25,7 @@ selected_classes = ['baseball', 'boxing', 'basketball', 'bowling',
                     'bull riding' , 'football', 'cheerleading', 'volleyball',
                     'formula 1 racing', 'snow boarding', 'polo']
 ```
-[](images/sport_sample.jpg)
+![sample](images/sport_sample.jpg)
 
 3. **Model Definitions** (**Custom Net**, **DenseNet121**):
 
