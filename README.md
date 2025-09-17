@@ -12,6 +12,10 @@ This project investigates the performance of image classification neural network
 The [100 Sports Classification dataset](https://www.kaggle.com/datasets/gpiosenka/sports-classification) (available on Kaggle) contains more than 100,000 color images (224×224 pixels) representing 100 different sports categories. For this project, 11 categories were selected, each with 15 to 20 images. 
 The dataset is then organized into balanced training, validation, and test sets.
 
+<div align="center">
+  <img src="images/sport_sample.png" alt="Description" width="500"/>
+</div>
+
 ## Project Structure
 
 1. **Data Loading and Augmentation**:
@@ -19,17 +23,9 @@ The dataset is then organized into balanced training, validation, and test sets.
    After import raw image data, apply transformations: random cropping, flipping, normalization
    to increase dataset diversity and improve model generalization.
 
-```
-# Select a subset of classes
-selected_classes = ['baseball', 'boxing', 'basketball', 'bowling',
-                    'bull riding' , 'football', 'cheerleading', 'volleyball',
-                    'formula 1 racing', 'snow boarding', 'polo']
-```
-![sample](images/sport_sample.jpg)
-
 3. **Model Definitions** (**Custom Net**, **DenseNet121**):
 
-   Develop custom convolutional neural network and a pre-trained architecture (with froozen last layers).
+   Develop custom convolutional neural network and a pre-trained architecture model (with froozen last layers).
 
 6. **Training and Evaluation**:
 
