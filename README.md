@@ -20,12 +20,51 @@ The dataset is then organized into balanced training, validation, and test sets.
 
 1. **Data Loading and Augmentation**:
    
-   After import raw image data, apply transformations: random cropping, flipping, normalization
+   Import raw image data,and apply transformations: random cropping, flipping, normalization
    to increase dataset diversity and improve model generalization.
 
-3. **Model Definitions** (**Simple Net**, **DenseNet121**):
+3. **Model Definitions**:
 
-   Develop custom convolutional neural network and a pre-trained architecture model (with froozen last layers).
+   Develop custom convolutional neural network and load the pre-trained architecture model (with froozen last layers).
+   
+   ***Simple Net***
+   
+   ```
+   net = nn.Sequential(
+    nn.Conv2d(3, 96, kernel_size=11, stride=4, padding=1), nn.ReLU(), #96==> 30
+    nn.MaxPool2d(kernel_size=3, stride=2),
+
+    nn.Conv2d(96, 192, kernel_size=5, padding=2), nn.ReLU(), #96==> 30, 256=>96
+    nn.MaxPool2d(kernel_size=3, stride=2),
+
+    nn.Conv2d(192, 384, kernel_size=3, padding=1), nn.ReLU(), #reduce the 3 layers to 2
+    nn.Conv2d(384, 600, kernel_size=3, padding=1), nn.ReLU(),
+    nn.MaxPool2d(kernel_size=3, stride=2),
+    nn.Flatten(),
+
+    nn.Linear(15000, 2400), nn.ReLU(),
+    nn.Dropout(p=0.5),
+
+    nn.Linear(2400, 8))
+   ```
+   
+   ***Dense Net*** with froozen layes to leverage transer learning.
+
+   ```
+   base_model = models.densenet121(pretrained=True)
+   
+   for param in base_model.parameters():
+    param.requires_grad = False
+   
+   all_conv_layers = list(base_model.features.children())
+   num_trainable_layers = 10  # train last 10 layers
+
+   # Set the Classifier
+   base_model.classifier = nn.Sequential(
+    nn.Linear(base_model.classifier.in_features, 512),
+    nn.ReLU(),
+    nn.Linear(512, 8))
+   ```
 
 6. **Training and Evaluation**:
 
