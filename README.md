@@ -22,9 +22,9 @@ The dataset is then organized into balanced training, validation, and test sets.
 
 4. **Performance Analysis**. Compare results from different models and configurations by examining metrics like accuracy, precision and training/test loss curves: visualize findings to identify the most effective strategies.
 
+## 💡 Results
 
-
-
+DenseNet121, leveraging pre-trained weights and transfer learning, achieved higher accuracy and generalization, particularly with limited training data. The Custom Net demonstrated competitive performance but was more sensitive to the size of the training set and hyperparameter choices. The performance of both the Custom Net and DenseNet121 models was evaluated on the selected sports image dataset using key metrics including accuracy, validation loss, and confusion matrices.
 
 
 
