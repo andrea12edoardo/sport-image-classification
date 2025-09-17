@@ -37,13 +37,17 @@ The dataset is then organized into balanced training, validation, and test sets.
 
 DenseNet121, leveraging pre-trained weights and transfer learning, achieved higher accuracy and generalization, particularly with limited training data. The Simple Net demonstrated competitive performance but was more sensitive to the size of the training set and hyperparameter choices. 
 
-The performance of the two architecture was evaluated on the selected sports image dataset using key metrics including accuracy, validation loss, and confusion matrices.
-
 The best results were achived with the following settings:
 
 - `batch_size = 128`
 - `lr = 0.0001`
 - `num_epochs = 50`
+
+<div align="center">
+<img src="images/performance.png" alt="Description" width="800"/>
+</div>
+
+
 
 
 
