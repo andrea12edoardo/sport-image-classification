@@ -14,13 +14,17 @@ The dataset is then organized into balanced training, validation, and test sets.
 
 ## Project Structure
 
-1. **Data Loading & Augmentation**: Import raw image data, apply transformations: random cropping, flipping, and normalization to increase dataset diversity and improve model generalization.
+1. **Data Loading & Augmentation**: Import raw image data, apply transformations:
+   - random cropping
+   - flipping
+   - normalization
+   to increase dataset diversity and improve model generalization.
 
-2. **Model Definitions** (**Custom Net**, **DenseNet121**): Develop and configure both a custom convolutional neural network and a DenseNet121 architecture (pretrained with last layers froozen) to serve as the primary classification models.
+3. **Model Definitions** (**Custom Net**, **DenseNet121**): Develop and configure both a custom convolutional neural network and a DenseNet121 architecture (pretrained with last layers froozen) to serve as the primary classification models.
 
-3. **Training & Evaluation**: Train each model on the processed datasets, monitor performance using validation data, and tune hyperparameters to optimize accuracy and reduce overfitting.
+4. **Training & Evaluation**: Train each model on the processed datasets, monitor performance using validation data, and tune hyperparameters to optimize accuracy and reduce overfitting.
 
-4. **Performance Analysis**. Compare results from different models and configurations by examining metrics like accuracy, precision and training/test loss curves: visualize findings to identify the most effective strategies.
+5. **Performance Analysis**. Compare results from different models and configurations by examining metrics like accuracy, precision and training/test loss curves: visualize findings to identify the most effective strategies.
 
 ## 💡 Results
 
