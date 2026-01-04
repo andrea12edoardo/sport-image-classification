@@ -1,4 +1,6 @@
-# 📖 About
+# Based on Gigant Shoulders: Neural Network for Sport Image Classification
+
+## 📖 About
 
 This project investigates the performance of image classification neural networks leveraging pre-trained models. The main objective is to evaluate the efficiency and accuracy of various architectures in recognizing and categorizing sports images. The analysis compares a neural network developed from scratch to various pre-trained models under diverse training configurations, assessing key metrics such as accuracy and computational complexity.
 
